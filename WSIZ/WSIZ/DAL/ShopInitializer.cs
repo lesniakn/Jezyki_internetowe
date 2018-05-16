@@ -7,7 +7,7 @@ using WSIZ.Models;
 
 namespace WSIZ.DAL
 {
-    public class ShopInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<ShopContext>
+    public class ShopInitializer : System.Data.Entity.DropCreateDatabaseAlways<ShopContext>
     {
         protected override void Seed(ShopContext context)
         {
