@@ -1,0 +1,66 @@
+﻿@model WSIZ.Models.Przedmiot
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Przedmiot</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KategoriaID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KategoriaID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NazwaPrzedmiotu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NazwaPrzedmiotu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProducentPrzedmiotu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProducentPrzedmiotu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDodania)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDodania)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpisPrzedmiotu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpisPrzedmiotu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CenaPrzedmiotu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CenaPrzedmiotu)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PrzedmiotID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

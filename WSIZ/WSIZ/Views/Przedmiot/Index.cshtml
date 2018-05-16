@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WSIZ.Models.Przedmiot>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.KategoriaID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NazwaPrzedmiotu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProducentPrzedmiotu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataDodania)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpisPrzedmiotu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CenaPrzedmiotu)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.KategoriaID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NazwaPrzedmiotu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProducentPrzedmiotu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataDodania)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpisPrzedmiotu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CenaPrzedmiotu)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PrzedmiotID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PrzedmiotID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PrzedmiotID })
+        </td>
+    </tr>
+}
+
+</table>
